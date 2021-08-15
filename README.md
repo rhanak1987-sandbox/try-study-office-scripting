@@ -1,10 +1,10 @@
 # try-study-office-scripting
 [No License] test repo (for) study and use office application scripts | LibreOffice Basic and/or MSO VBA
 
-## about
+## About
 Not much to see here as long as the project is still in its infancy.
 
-## tech stack
+## Tech Stack
  * LibreOffice Basic
 
 ## Legal
