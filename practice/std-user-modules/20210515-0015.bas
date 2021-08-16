@@ -1,4 +1,4 @@
-REM  *****  BASIC  *****
+'REM  *****  BASIC  *****
 Option Explicit
 
 ' OEX = Using Option Explicit

@@ -1,4 +1,4 @@
-REM  *****  BASIC  *****
+'REM  *****  BASIC  *****
 
 'use public Debug stack
 'initDebug
