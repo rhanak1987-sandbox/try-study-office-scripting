@@ -6,6 +6,7 @@ Not much to see here as long as the project is still in its infancy.
 
 ## Tech Stack
  * LibreOffice Basic
+ * ![sub testing runtine sample](./pic/debugger-test-2021-08-16-145446.png)
 
 ## Legal
 * Many repos in the sandbox are created as personal or study projects. But if you want to use it and can't find a license, you might ask for one, and probably I can attach MIT or MPL2 to it.
