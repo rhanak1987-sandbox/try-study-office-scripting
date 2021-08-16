@@ -1,4 +1,5 @@
-'REM  *****  BASIC  *****
+'REM  *****  BASIC  ***** (LibreOffice Basic)
+'...;....1....;....2....;....3....;....4....;....5....;....6....;....7....;....8
 Option Explicit
 
 ' OEX = Using Option Explicit
@@ -15,11 +16,11 @@ Option Explicit
 ' OEX |   0 |   1 |
 
 Private Sub main
-	Dim msg As String
-	msg = "hello, test me"
-	Call printTarget(msg)
+    Dim msg As String
+    msg = "hello, test me"
+    Call printTarget(msg)
 End Sub
 
 Private Sub printTarget(byval msg as string)
-	msgbox(msg)
+    msgbox(msg)
 End Sub
