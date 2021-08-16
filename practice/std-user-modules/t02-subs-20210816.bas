@@ -12,7 +12,7 @@ Private Sub main
 	DebugEmu.pushToDebug("testing started")
 	Call localTests
 	DebugEmu.pushToDebug("testing finished")
-	Call printTarget(getDebug)
+	Call printTarget(pushToDebug.getDebug)
 End Sub
 
 Private Sub localTests

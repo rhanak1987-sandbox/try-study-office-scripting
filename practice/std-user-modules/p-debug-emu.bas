@@ -1,11 +1,11 @@
-'REM  *****  BASIC  *****
+REM  *****  BASIC  *****
 
 'use public Debug stack
 'initDebug
 'pushToDebug
 'getDebug
 
-Private debugString As String
+Private debugString As String 'can be watched during debug
 
 Private Sub main
 	'testing debug emu
