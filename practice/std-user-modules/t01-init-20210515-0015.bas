@@ -3,7 +3,7 @@
 Option Explicit
 
 ' OEX = Using Option Explicit
-' DIM = Declare Varialbe with Dim
+' DIM = Declare Variable with Dim
 
 ' OEX | DIM | RES
 '   0 |   0 |   1

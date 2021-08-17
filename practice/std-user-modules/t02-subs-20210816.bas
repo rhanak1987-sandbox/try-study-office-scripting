@@ -4,9 +4,9 @@ Option Explicit
 
 Private Sub main
     DebugEmu.initDebug("")
-    DebugEmu.pushToDebug("testing started")
+    DebugEmu.pushToDebug("testing started: " & Now())
     Call localTests
-    DebugEmu.pushToDebug("testing finished")
+    DebugEmu.pushToDebug("testing finished: " & Now())
     Call printTarget(DebugEmu.getDebug)
 End Sub
 
