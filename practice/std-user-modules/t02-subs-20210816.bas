@@ -28,7 +28,10 @@ Private Sub localTests
     Call addLineToDebug
 End Sub
 
-Private Function includeHello(ByVal msg As String) As String
+Private Function includeHello( _
+    ByVal msg As String) _
+    As String 'How to split long lines
+    
     includeHello = "Hello! " + msg
 End Function
 
