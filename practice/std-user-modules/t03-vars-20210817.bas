@@ -1,6 +1,14 @@
-'REM  *****  BASIC  ***** (LibreOffice Basic)
+'REM  *****  BASIC  ***** tech: LibreOffice Basic
+
+'Repo: https://github.com/rhanak1987-sandbox/try-study-office-scripting
+'      as the developer and copyright holder (if applicable) of this project
 '...;....1....;....2....;....3....;....4....;....5....;....6....;....7....;....8
-'tested: 22:20 2021-08-17 | ok
+
+'TODO: tidy with: https://github.com/todar/VBA-Style-Guide
+'      as a user of the above style guide provided with "MIT License"
+'look for: "TODO:", "FIXME:"
+'tested: 23:18 2021-08-17 | ok
+
 Option Explicit
 
 Private Sub main
@@ -109,6 +117,7 @@ Private Sub printTarget(ByVal msg As String)
     Call MsgBox(msg)
 End Sub
 
+'...;....1....;....2....;....3....;....4....;....5....;....6....;....7....;....8
 'use public Debug stack
 'initDebug
 'pushToDebug
