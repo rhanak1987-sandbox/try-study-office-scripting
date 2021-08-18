@@ -33,10 +33,12 @@ Private Sub testVariables
     Dim int3 As Integer
     int3 = int1 + int2
     Call DebugEmu.pushToDebug(int3)
+    Call DebugEmu.pushToDebug(int1 - &h7FFF)
+    Call DebugEmu.pushToDebug(int1 - &o77777)
 
     Call addLineToDebug
     Dim lng1 As Long
-    lng1 = 2147483647 'long max 2 147 483 647
+    lng1 = 2147483647 'long max (2 147 483 647)
     Dim lng2&
     lng2 = -2147483648 'long min
     Dim lng3 As Long
@@ -46,6 +48,7 @@ Private Sub testVariables
     Call DebugEmu.pushToDebug(lng3)
     'lng3 = lng1 + 1 'long_max + 1 -> overflow
     'Call DebugEmu.pushToDebug(lng3)
+    Call DebugEmu.pushToDebug(lng1 - &h7fffffff)
 
     Call addLineToDebug
     Dim sng1 As Single
@@ -93,6 +96,17 @@ Private Sub testVariables
     dbl3 = fakeRound(dbl3, 10000)
     formattedNumber = Format(dbl3, "0.####")
     debugMessage =  "0.1(#) / 0.1(!) = " & formattedNumber & " = " & dbl3
+    Call DebugEmu.pushToDebug(debugMessage)
+
+    Call addLineToDebug
+    Dim cur1 As Currency
+    cur1 = 120
+    Dim cur2@
+    cur2 = 0.01
+    Dim cur3 As Currency
+    cur3 = cur1 * cur2
+    formattedNumber = Format(cur3, "0.####")
+    debugMessage =  "120(@) * 0.01(@) = " & formattedNumber & " = " & cur3
     Call DebugEmu.pushToDebug(debugMessage)
 
     Call addLineToDebug
