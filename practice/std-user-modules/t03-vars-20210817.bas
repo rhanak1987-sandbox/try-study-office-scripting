@@ -32,9 +32,14 @@ Private Sub testVariables
     int2 = -32768 'int min.
     Dim int3 As Integer
     int3 = int1 + int2
-    Call DebugEmu.pushToDebug(int3)
-    Call DebugEmu.pushToDebug(int1 - &h7FFF)
-    Call DebugEmu.pushToDebug(int1 - &o77777)
+    debugMessage = "32767(%) + -32768(%) = " & int3
+    Call DebugEmu.pushToDebug(debugMessage)
+    int3 = int1 - &h7FFF
+    debugMessage = "32767(%) - &h7FFF = " & int3
+    Call DebugEmu.pushToDebug(debugMessage)
+    int3 = int1 - &o77777
+    debugMessage = "32767(%) - &o77777 = " & int3
+    Call DebugEmu.pushToDebug(debugMessage)
 
     Call addLineToDebug
     Dim lng1 As Long
@@ -43,12 +48,16 @@ Private Sub testVariables
     lng2 = -2147483648 'long min
     Dim lng3 As Long
     lng3 = lng1 + lng2
-    Call DebugEmu.pushToDebug(lng3)
+    debugMessage = "2147483647(&) + -2147483648(&) = " & lng3
+    Call DebugEmu.pushToDebug(debugMessage)
     lng3 = lng1 / lng2
-    Call DebugEmu.pushToDebug(lng3)
+    debugMessage = "2147483647(&) / -2147483648(&) = " & lng3
+    Call DebugEmu.pushToDebug(debugMessage)
     'lng3 = lng1 + 1 'long_max + 1 -> overflow
     'Call DebugEmu.pushToDebug(lng3)
-    Call DebugEmu.pushToDebug(lng1 - &h7fffffff)
+    lng3 = lng1 - &h7fffffff
+    debugMessage = "2147483647(&) - &h7fffffff = " & lng3
+    Call DebugEmu.pushToDebug(debugMessage)
 
     Call addLineToDebug
     Dim sng1 As Single
@@ -107,6 +116,29 @@ Private Sub testVariables
     cur3 = cur1 * cur2
     formattedNumber = Format(cur3, "0.####")
     debugMessage =  "120(@) * 0.01(@) = " & formattedNumber & " = " & cur3
+    Call DebugEmu.pushToDebug(debugMessage)
+
+    Call addLineToDebug
+    Dim str1 As String
+    str1 = "apple"
+    Dim str2$
+    str2 = "banana"
+    Dim str3 As String
+    str3 = str1 & ", " & str2
+    debugMessage = "str1($), str2($) = " & str3
+    Call DebugEmu.pushToDebug(debugMessage)
+
+    Call addLineToDebug
+    Dim bln1 As Boolean
+    bln1 = True
+    Dim bln2 As Boolean
+    bln2 = False
+    Dim bln3 As Boolean
+    bln3 = bln1 And bln2
+    debugMessage = "True AND False = " & bln3
+    Call DebugEmu.pushToDebug(debugMessage)
+    bln3 = bln1 Or bln2
+    debugMessage = "True OR False = " & bln3
     Call DebugEmu.pushToDebug(debugMessage)
 
     Call addLineToDebug
