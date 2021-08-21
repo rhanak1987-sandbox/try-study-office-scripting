@@ -6,7 +6,7 @@ Not much to see here as long as the project is still in its infancy.
 
 ## Tech Stack
  * LibreOffice Basic
- * ![sub testing runtine sample](./pic/debug-test-2021-08-22-001813)
+ * ![sub testing runtine sample](./pic/debug-test-2021-08-22-001813.png)
 
 ## Legal
 * See the [main License of this repo](./LICENSE)
