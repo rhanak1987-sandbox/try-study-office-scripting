@@ -7,7 +7,7 @@
 'TODO: tidy with: https://github.com/todar/VBA-Style-Guide
 '      as a user of the above style guide provided with "MIT License"
 'look for: "TODO:", "FIXME:"
-'tested: 23:18 2021-08-17 | ok
+'tested: 18:59 2021-08-21 | ok
 
 Option Explicit
 
@@ -139,6 +139,19 @@ Private Sub testVariables
     Call DebugEmu.pushToDebug(debugMessage)
     bln3 = bln1 Or bln2
     debugMessage = "True OR False = " & bln3
+    Call DebugEmu.pushToDebug(debugMessage)
+
+    Call addLineToDebug
+    Dim dte1 As Date
+    Call DebugEmu.pushToDebug(dte1)
+    dte1 = Now()
+    Dim dte2 As Date
+    dte2 = DateSerial(2021, 08, 21) + TimeSerial(18,30,00)
+    Dim dte3 As Date
+    dte3 = dte1 - dte2
+    debugMessage = dte1 & ", " & dte2
+    Call DebugEmu.pushToDebug(debugMessage)
+    debugMessage = "diff = " & dte3
     Call DebugEmu.pushToDebug(debugMessage)
 
     Call addLineToDebug
