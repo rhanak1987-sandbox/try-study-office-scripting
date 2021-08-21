@@ -1,16 +1,27 @@
-'REM  *****  BASIC  ***** (LibreOffice Basic)
+'REM  *****  BASIC  ***** tech: LibreOffice Basic
+
+'Repo: https://github.com/rhanak1987-sandbox/try-study-office-scripting
+'      as the developer and copyright holder (if applicable) of this project
 '...;....1....;....2....;....3....;....4....;....5....;....6....;....7....;....8
+
+'TODO: tidy with: https://github.com/todar/VBA-Style-Guide
+'      as a user of the above style guide provided with "MIT License"
+'look for: "TODO:", "FIXME:"
+'tested: 21:37 2021-08-21 | ok
+
 Option Explicit
 
 Private Sub main
     DebugEmu.initDebug("")
     DebugEmu.pushToDebug("testing started: " & Now())
-    Call localTests
+
+    Call testSubroutines
+
     DebugEmu.pushToDebug("testing finished: " & Now())
     Call printTarget(DebugEmu.getDebug)
 End Sub
 
-Private Sub localTests
+Private Sub testSubroutines
     Dim msg As String
     msg = "test me"
 
@@ -48,9 +59,10 @@ Private Sub addLineToDebug
 End Sub
 
 Private Sub printTarget(ByVal msg As String)
-    msgbox(msg)
+    MsgBox(msg)
 End Sub
 
+'...;....1....;....2....;....3....;....4....;....5....;....6....;....7....;....8
 'use public Debug stack
 'initDebug
 'pushToDebug
